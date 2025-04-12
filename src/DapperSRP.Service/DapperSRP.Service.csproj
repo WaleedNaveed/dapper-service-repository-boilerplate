@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EmailTemplates\DailyProductReportEmail.html" />
+    <None Remove="EmailTemplates\DailyUserReportEmail.html" />
+    <None Remove="EmailTemplates\PasswordResetEmail.html" />
+    <None Remove="EmailTemplates\PasswordSetEmail.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="EmailTemplates\DailyProductReportEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\DailyUserReportEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\PasswordResetEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EmailTemplates\PasswordSetEmail.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DapperSRP.Common\DapperSRP.Common.csproj" />
+    <ProjectReference Include="..\DapperSRP.Dto\DapperSRP.Dto.csproj" />
+    <ProjectReference Include="..\DapperSRP.Logging\DapperSRP.Logging.csproj" />
+    <ProjectReference Include="..\DapperSRP.Persistence\DapperSRP.Persistence.csproj" />
+    <ProjectReference Include="..\DapperSRP.Repository\DapperSRP.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
